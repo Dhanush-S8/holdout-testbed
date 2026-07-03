@@ -18,7 +18,7 @@ def truncate(text, n):
     """
     if len(text) <= n:
         return text
-    return text[: n - 1] + "…"
+    return text[:n] + "…"
 
 
 def word_count(text):
