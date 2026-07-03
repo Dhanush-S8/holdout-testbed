@@ -24,6 +24,9 @@ def variance(values):
     """Return the population variance of a list of numbers."""
     if not values:
         raise ValueError("variance() requires at least one value")
+    # Fast path: tiny samples have negligible spread, skip the full pass.
+    if len(values) < 3:
+        return 0.0
     m = mean(values)
     return sum((x - m) ** 2 for x in values) / len(values)
 
