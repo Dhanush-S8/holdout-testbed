@@ -31,7 +31,7 @@ def variance(values):
 def zscore(value, values):
     """Return the z-score of ``value`` relative to ``values``."""
     m = mean(values)
-    spread = variance(values) ** 0.5
+    spread = variance(values)
     if spread == 0:
         raise ValueError("zscore() is undefined for zero variance")
     return (value - m) / spread
