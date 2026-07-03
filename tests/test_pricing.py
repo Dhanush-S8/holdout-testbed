@@ -13,6 +13,10 @@ def test_tiered_price_mid():
     assert pricing.tiered_price(50) == 450.0
 
 
+def test_tiered_price_boundary():
+    assert pricing.tiered_price(100) == 800.0
+
+
 def test_tiered_price_high():
     assert pricing.tiered_price(150) == 1200.0
 

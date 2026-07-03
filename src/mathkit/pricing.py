@@ -14,7 +14,7 @@ def tiered_price(qty):
         10-99  -> 9.0
         100+   -> 8.0
     """
-    if qty > 100:
+    if qty >= 100:
         unit = 8.0
     elif qty >= 10:
         unit = 9.0
